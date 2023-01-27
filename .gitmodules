@@ -1,1 +1,4 @@
 
+[submodule "kakarot"]
+	path = kakarot
+	url = https://github.com/Bal7hazar/kakarot.git
