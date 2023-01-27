@@ -31,6 +31,10 @@ jobs:
 
       - name: Generate kakarot documentation
         run: |
+          mkdir toto
+          ls
+          touch toto.txt
+          ls
           pwd
           npx --yes @onlydust/kaaper generate kakarot/src $(pwd)/data
           ls
