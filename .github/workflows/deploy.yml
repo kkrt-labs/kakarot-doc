@@ -33,9 +33,6 @@ jobs:
           python -m pip install --upgrade pip
           pip install mdutils pyyaml
 
-      - name: Update submodules
-        run: git submodule update --remote --recursive
-
       - name: Generate kakarot documentation
         run: |
           ls
