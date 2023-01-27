@@ -1,3 +1,4 @@
 [submodule "kakarot"]
 	path = kakarot
 	url = https://github.com/sayajin-labs/kakarot.git
+    branch = main

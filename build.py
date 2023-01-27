@@ -146,13 +146,10 @@ class Document():
 
 source = Path("./data")
 target = Path("./docs")
-print([d for d in source.parent.glob("*")])
-print(source.exists())
 if target.exists():
     shutil.rmtree(target)
 shutil.copytree(source, target)
 for path in target.glob("**/*.yaml"):
-    print(path)
     document = Document.from_yaml(path.parent, path)
     document.create_api_page()
     path.unlink()
