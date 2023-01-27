@@ -30,9 +30,7 @@ jobs:
         run: git submodule update --remote --recursive
 
       - name: Generate kakarot documentation
-        run: |
-          npx --yes @onlydust/kaaper generate ./kakarot/src ./data
-          python build.py
+        run: npx --yes @onlydust/kaaper generate ./kakarot/src ./data && python build.py
 
       - name: Install dependencies
         run: yarn install --frozen-lockfile
