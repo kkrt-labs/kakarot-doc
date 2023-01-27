@@ -31,7 +31,8 @@ jobs:
 
       - name: Generate kakarot documentation
         run: |
-          npx --yes @onlydust/kaaper generate ./kakarot/src ./data
+          pwd
+          npx --yes @onlydust/kaaper generate kakarot/src $(pwd)/data
           ls
           python build.py
 
