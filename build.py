@@ -144,8 +144,10 @@ class Document():
             markdown.new_line("```")
 
 
-source = Path("data")
-target = Path("docs")
+source = Path("./data")
+target = Path("./docs")
+print([d for d in source.parent.glob("*")])
+print(source.exists())
 if target.exists():
     shutil.rmtree(target)
 shutil.copytree(source, target)
