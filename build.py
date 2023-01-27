@@ -144,13 +144,13 @@ class Document():
             markdown.new_line("```")
 
 
-root = Path(__file__).parent
-source = root / "data"
-target = root / "docs/docs"
+source = Path("data")
+target = Path("docs")
 if target.exists():
     shutil.rmtree(target)
 shutil.copytree(source, target)
 for path in target.glob("**/*.yaml"):
-    document = Document.from_yaml(target / path.parent, path)
+    print(path)
+    document = Document.from_yaml(path.parent, path)
     document.create_api_page()
     path.unlink()
