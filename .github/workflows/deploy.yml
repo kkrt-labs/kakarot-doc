@@ -35,7 +35,7 @@ jobs:
 
       - name: Generate kakarot documentation
         run: |
-          npx --yes @onlydust/kaaper generate ./kakarot/src ./data
+          npx --yes @onlydust/kaaper generate --standard natspec ./kakarot/src ./data
           python build.py
 
       - name: Install dependencies

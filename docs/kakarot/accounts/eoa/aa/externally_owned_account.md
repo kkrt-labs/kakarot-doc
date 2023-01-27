@@ -19,8 +19,8 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-_eth_address (felt)  
-_kakarot_address (felt)  
+_eth_address (felt): The Ethereum address which will control the account  
+_kakarot_address (felt): The Starknet address of the Kakarot contract  
 ```
 ## View
 
@@ -52,7 +52,7 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-interface_id (felt)  
+interface_id (felt): The interface Id to verify if supported  
 ```
 #### Returns
   
@@ -61,7 +61,7 @@ success (felt)
 ```
 ### `is_valid_signature`
   
-
+checks if the signature is valid
 #### Implicit arguments
   
 ```python  
@@ -73,10 +73,10 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-hash_len (felt)  
-hash (felt*)  
-signature_len (felt)  
-signature (felt*)  
+hash_len (felt): The hash length which was signed  
+hash (felt*): The hash [low_128_bits, high_128_bits]  
+signature_len (felt): The length of the signature array  
+signature (felt*): The array of the ethereum signature (as v, r, s)  
 ```
 #### Returns
   
@@ -87,7 +87,7 @@ is_valid (felt)
 
 ### `__validate__`
   
-
+validate a transaction
 #### Implicit arguments
   
 ```python  
@@ -98,7 +98,7 @@ range_check_ptr
 ```
 ### `__validate_declare__`
   
-
+validates this account class for declaration
 #### Implicit arguments
   
 ```python  
@@ -114,7 +114,7 @@ class_hash (felt)
 ```
 ### `__execute__`
   
-
+executes the Kakarot transaction
 #### Implicit arguments
   
 ```python  

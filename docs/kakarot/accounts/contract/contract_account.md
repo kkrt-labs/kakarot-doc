@@ -28,7 +28,7 @@ bytecode (felt*)
 
 ### `bytecode`
   
-
+This function is used to get the bytecode of the smart contract.
 #### Implicit arguments
   
 ```python  
@@ -45,7 +45,7 @@ bytecode (felt*)
 ```
 ### `bytecode_len`
   
-
+This function is used to get only the bytecode_len of the smart contract.
 #### Implicit arguments
   
 ```python  
@@ -61,7 +61,7 @@ len (felt)
 ```
 ### `storage`
   
-
+Read a given storage key
 #### Implicit arguments
   
 ```python  
@@ -82,7 +82,7 @@ value (Uint256)
 ```
 ### `is_initialized`
   
-
+This function checks if the account was initialized.
 #### Implicit arguments
   
 ```python  
@@ -100,7 +100,7 @@ is_initialized (felt)
 
 ### `write_bytecode`
   
-
+Store the bytecode of the contract.
 #### Implicit arguments
   
 ```python  
@@ -112,12 +112,12 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-bytecode_len (felt)  
-bytecode (felt*)  
+bytecode_len (felt): : The length of the bytecode.  
+bytecode (felt*): : The bytecode of the contract.  
 ```
 ### `write_storage`
   
-
+Store a key-value pair
 #### Implicit arguments
   
 ```python  
@@ -129,12 +129,12 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-key (Uint256)  
-value (Uint256)  
+key (Uint256): : The bytes32 storage key.  
+value (Uint256): : The bytes32 stored value.  
 ```
 ### `initialize`
   
-
+This function is used to initialize the smart contract.
 #### Implicit arguments
   
 ```python  

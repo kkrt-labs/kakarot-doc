@@ -8,7 +8,10 @@
 
 ### `get_create_address`
   
-
+Constructs an evm contract address for the create opcode
+via last twenty bytes of the keccak hash of:
+keccak256(rlp([sender_address,sender_nonce]))[
+See [CREATE](https://www.evm.codes/#f0)
 #### Implicit arguments
   
 ```python  
@@ -20,7 +23,7 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-sender_address (felt)  
+sender_address (felt): - The evm sender address.  
 salt (felt)  
 ```
 #### Returns
@@ -30,7 +33,11 @@ evm_contract_address (felt)
 ```
 ### `get_create2_address`
   
-
+Constructs an evm contract address for the create2 opcode
+via last twenty bytes of the keccak hash of:
+keccak256(0xff + sender_address + salt +
+keccak256(initialisation_code))[12:]
+See [CREATE2](https://www.evm.codes/#f5)
 #### Implicit arguments
   
 ```python  
@@ -42,10 +49,10 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-sender_address (felt)  
-bytecode_len (felt)  
-bytecode (felt*)  
-salt (Uint256)  
+sender_address (felt): - The evm sender address.  
+bytecode_len (felt): - The length of the initialization code.  
+bytecode (felt*): - The offset to store the element at.  
+salt (Uint256): - The salt given to the create2 opcode.  
 ```
 #### Returns
   

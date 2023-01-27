@@ -8,7 +8,7 @@
 
 ### `run`
   
-
+Run the precompile.
 #### Implicit arguments
   
 ```python  
@@ -21,8 +21,8 @@ bitwise_ptr (BitwiseBuiltin*)
   
 ```python  
 _address (felt)  
-input_len (felt)  
-input (felt*)  
+input_len (felt): The length of input array.  
+input (felt*): The input array.  
 ```
 #### Returns
   
@@ -33,7 +33,7 @@ gas_used (felt)
 ```
 ### `F`
   
-
+Performs the blake2b compression function
 #### Implicit arguments
   
 ```python  
@@ -45,12 +45,12 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-rounds (felt)  
-h (felt*)  
-m (felt*)  
+rounds (felt): The number of rounds for the compression function  
+h (felt*): The internal state of the hash  
+m (felt*): The sixteen words of a single message  
 t0 (felt)  
 t1 (felt)  
-f (felt)  
+f (felt): The flag indicating the last block  
 ```
 #### Returns
   
@@ -59,7 +59,7 @@ output (felt*)
 ```
 ### `blake_rounds`
   
-
+Performs all blake2b compression function rounds
 #### Implicit arguments
   
 ```python  
@@ -71,11 +71,11 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-rounds (felt)  
-i (felt)  
-h (felt*)  
-m (felt*)  
-sigma (felt*)  
+rounds (felt): The number of rounds for the compression function  
+i (felt): The current round  
+h (felt*): The internal state of the hash  
+m (felt*): The sixteen words of a single message  
+sigma (felt*): The message schedule  
 ```
 #### Returns
   
@@ -84,7 +84,7 @@ final_h (felt*)
 ```
 ### `blake_round`
   
-
+Performs a single round of the blake2b compression function
 #### Implicit arguments
   
 ```python  
@@ -96,9 +96,9 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-state (felt*)  
-message (felt*)  
-sigma (felt*)  
+state (felt*): The internal state of the hash  
+message (felt*): The sixteen words of a single message  
+sigma (felt*): The message schedule  
 ```
 #### Returns
   
@@ -107,7 +107,7 @@ new_state (felt*)
 ```
 ### `mix_one`
   
-
+Performs a mixing of inputs
 #### Implicit arguments
   
 ```python  
@@ -119,11 +119,11 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-a (felt)  
-b (felt)  
-c (felt)  
-d (felt)  
-m (felt)  
+a (felt): The first state word  
+b (felt): The second state word  
+c (felt): The third state word  
+d (felt): The fourth state word  
+m (felt): The message word used in mixing  
 ```
 #### Returns
   
@@ -135,7 +135,7 @@ d (felt)
 ```
 ### `mix_two`
   
-
+Performs a mixing of inputs
 #### Implicit arguments
   
 ```python  
@@ -147,11 +147,11 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-a (felt)  
-b (felt)  
-c (felt)  
-d (felt)  
-m (felt)  
+a (felt): The first state word  
+b (felt): The second state word  
+c (felt): The third state word  
+d (felt): The fourth state word  
+m (felt): The message word used in mixing  
 ```
 #### Returns
   

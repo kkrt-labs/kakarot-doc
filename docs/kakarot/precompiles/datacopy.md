@@ -8,7 +8,7 @@
 
 ### `run`
   
-
+Run the precompile.
 #### Implicit arguments
   
 ```python  
@@ -21,8 +21,8 @@ bitwise_ptr (BitwiseBuiltin*)
   
 ```python  
 _address (felt)  
-input_len (felt)  
-input (felt*)  
+input_len (felt): The length of input array.  
+input (felt*): The input array.  
 ```
 #### Returns
   

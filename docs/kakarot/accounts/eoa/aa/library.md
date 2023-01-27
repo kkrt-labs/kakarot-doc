@@ -8,7 +8,7 @@
 
 ### `validate`
   
-
+checks if tx is signed and valid for each call
 #### Implicit arguments
   
 ```python  
@@ -20,15 +20,15 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-eth_address (felt)  
-call_array_len (felt)  
-call_array (CallArray*)  
-calldata_len (felt)  
-calldata (felt*)  
+eth_address (felt): The ethereum address owning this account  
+call_array_len (felt): The length of the call array  
+call_array (CallArray*): The call array  
+calldata_len (felt): The length of the calldata  
+calldata (felt*): The calldata  
 ```
 ### `is_valid_eth_tx`
   
-
+decodes evm tx and validates it
 #### Implicit arguments
   
 ```python  
@@ -40,9 +40,9 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-eth_address (felt)  
-calldata_len (felt)  
-calldata (felt*)  
+eth_address (felt): The ethereum address owning the account  
+calldata_len (felt): The lenght of the calldata  
+calldata (felt*): The calldata  
 ```
 #### Returns
   
@@ -51,7 +51,7 @@ is_valid (felt)
 ```
 ### `is_valid_eth_signature`
   
-
+returns 1 (true) and does not fail if the signature is valid
 #### Implicit arguments
   
 ```python  
@@ -66,8 +66,8 @@ range_check_ptr
 msg_hash (Uint256)  
 r (Uint256)  
 s (Uint256)  
-v (felt)  
-eth_address (felt)  
+v (felt): , r, s The signature  
+eth_address (felt): The ethereum address to compare the signature  
 ```
 #### Returns
   

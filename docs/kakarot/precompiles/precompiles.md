@@ -26,7 +26,7 @@ felt
 ```
 ### `_exec_precompile`
   
-
+Executes associated function of precompiled address
 #### Implicit arguments
   
 ```python  
@@ -38,9 +38,9 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-address (felt)  
-input_len (felt)  
-input (felt*)  
+address (felt): The precompile address.  
+input_len (felt): The length of the input array.  
+input (felt*): The input array.  
 ```
 #### Returns
   
@@ -51,7 +51,7 @@ gas_used (felt)
 ```
 ### `not_implemented_precompile`
   
-
+A placeholder for precompile that are not implemented yet
 #### Implicit arguments
   
 ```python  

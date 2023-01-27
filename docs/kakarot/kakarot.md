@@ -27,7 +27,7 @@ evm_contract_class_hash (felt)
 
 ### `execute`
   
-
+Execute EVM bytecode
 #### Implicit arguments
   
 ```python  
@@ -39,11 +39,11 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-value (felt)  
-bytecode_len (felt)  
-bytecode (felt*)  
-calldata_len (felt)  
-calldata (felt*)  
+value (felt): The deposited value by the instruction/transaction responsible for this execution  
+bytecode_len (felt): The bytecode length  
+bytecode (felt*): The bytecode to be executed  
+calldata_len (felt): The calldata length  
+calldata (felt*): The calldata which can be referenced by the bytecode  
 ```
 #### Returns
   
@@ -58,7 +58,7 @@ gas_used (felt)
 ```
 ### `get_account_registry`
   
-
+Get the account registry used by kakarot
 #### Implicit arguments
   
 ```python  
@@ -73,7 +73,7 @@ address (felt)
 ```
 ### `get_blockhash_registry`
   
-
+Get the blockhash registry used by kakarot
 #### Implicit arguments
   
 ```python  
@@ -90,7 +90,7 @@ address (felt)
 
 ### `execute_at_address`
   
-
+execute bytecode of a given contract account
 #### Implicit arguments
   
 ```python  
@@ -102,11 +102,11 @@ bitwise_ptr (BitwiseBuiltin*)
 #### Explicit arguments
   
 ```python  
-address (felt)  
-value (felt)  
-gas_limit (felt)  
-calldata_len (felt)  
-calldata (felt*)  
+address (felt): The address of the contract whose bytecode will be executed  
+value (felt): The deposited value by the instruction/transaction responsible for this execution  
+gas_limit (felt): Max gas the transaction can use  
+calldata_len (felt): The calldata length  
+calldata (felt*): The calldata which contains the entry point and method parameters  
 ```
 #### Returns
   
@@ -125,7 +125,7 @@ gas_used (felt)
 ```
 ### `set_account_registry`
   
-
+Set the account registry used by kakarot
 #### Implicit arguments
   
 ```python  
@@ -136,11 +136,11 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-registry_address_ (felt)  
+registry_address_ (felt): The address of the new account registry contract  
 ```
 ### `set_blockhash_registry`
   
-
+Set the blockhash registry used by kakarot
 #### Implicit arguments
   
 ```python  
@@ -151,11 +151,11 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-blockhash_registry_address_ (felt)  
+blockhash_registry_address_ (felt): The address of the new blockhash registry contract  
 ```
 ### `set_native_token`
   
-
+Set the native token used by kakarot
 #### Implicit arguments
   
 ```python  
@@ -166,11 +166,11 @@ range_check_ptr
 #### Explicit arguments
   
 ```python  
-native_token_address_ (felt)  
+native_token_address_ (felt): The address of the native token  
 ```
 ### `deploy`
   
-
+Deploy a new contract account and execute constructor
 #### Implicit arguments
   
 ```python  
