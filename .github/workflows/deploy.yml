@@ -26,17 +26,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install mdutils pyyaml
 
-      - name: Install node dependencies
-        run: |
-          yarn global add @onlydust/kaaper
-
       - name: Update submodules
         run: git submodule update --remote --recursive
 
       - name: Generate kakarot documentation
         run: |
-          kaaper generate ./kakarot/src ./data
-          ls
+          ls ./kakarot
+          npx --yes @onlydust/kaaper generate ./kakarot/src ./data
           python build.py
 
       - name: Install dependencies
