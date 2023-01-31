@@ -116,7 +116,7 @@ class Document():
 
         for method, args in function_signature.items():
             # hide implicit arguments
-            if args is None:
+            if args is None or not all(arg.get('name') for arg in args):
                 continue
 
             markdown.new_header(
@@ -144,11 +144,20 @@ class Document():
             markdown.new_line("```")
 
 
+# Clean up docs folder before generation
 source = Path("./data")
 target = Path("./docs")
 if target.exists():
     shutil.rmtree(target)
 shutil.copytree(source, target)
+
+# Capitalize all subfolders
+for path in reversed(list(target.glob("./**"))):
+    if path is not target:
+        new = path.parent / path.stem.capitalize()
+        shutil.move(path, new)
+
+# Create markdown for each yaml files
 for path in target.glob("**/*.yaml"):
     document = Document.from_yaml(path.parent, path)
     document.create_api_page()

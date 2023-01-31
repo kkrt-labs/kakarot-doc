@@ -59,7 +59,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'kakarot/kakarot',
+            docId: 'Kakarot/kakarot',
             position: 'left',
             label: 'API',
           },
@@ -78,7 +78,7 @@ const config = {
             items: [
               {
                 label: 'Tutorial',
-                to: '/docs/kakarot',
+                to: '/docs/Kakarot',
               },
             ],
           },
