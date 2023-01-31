@@ -8,16 +8,16 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Kakarot',
   tagline: "EVM interpreter written in Cairo",
-  url: 'https://bal7hazar.github.io/',
-  baseUrl: '/kinto-un',
+  url: 'https://sayajin-labs.github.io/',
+  baseUrl: '/kakarot-doc',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Bal7hazar', // Usually your GitHub org/user name.
-  projectName: 'kinto-un', // Usually your repo name.
+  organizationName: 'sayajin-labs', // Usually your GitHub org/user name.
+  projectName: 'kakarot-doc', // Usually your repo name.
   deploymentBranch: 'master',
 
   // Even if you don't use internalization, you can use this field to set useful
