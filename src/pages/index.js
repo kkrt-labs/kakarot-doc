@@ -18,7 +18,7 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/kakarot">
-            Getting started - 9000min ⏱️
+            Getting started - It's over 9000! ⏱️
           </Link>
         </div>
       </div>

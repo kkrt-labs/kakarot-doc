@@ -8,21 +8,16 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua.
+        More details on how to build the solution <a href="https://github.com/sayajin-labs/kakarot#build" target="_blank">here</a>.
       </>
     ),
   },
   {
-    title: 'Test',
+    title: 'Deploy',
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum
+        More details on how to deploy Kakarot <a href="https://github.com/sayajin-labs/kakarot#deploy" target="_blank">here</a>.
       </>
     ),
   },
@@ -31,9 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-        ex ea commodo consequat.
+      More details on how to contribute <a href="https://github.com/sayajin-labs/kakarot/blob/main/docs/CONTRIBUTING.md" target="_blank">here</a>.
       </>
     ),
   },
