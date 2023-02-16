@@ -116,7 +116,7 @@ class Document():
 
         for method, args in function_signature.items():
             # hide implicit arguments
-            if args is None or not all(arg.get('name') for arg in args):
+            if args is None or all(not arg.get('name') for arg in args):
                 continue
 
             markdown.new_header(
