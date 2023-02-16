@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        More details on how to build the solution <a href="https://github.com/sayajin-labs/kakarot#build" target="_blank">here</a>
+        More details on how to build the solution <a href="https://github.com/sayajin-labs/kakarot#build" target="_blank">here</a> 
       </>
     ),
   },
