@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'Kakarot',
   tagline: "EVM interpreter written in Cairo",
-  url: 'http://doc.kakarot.org/',
+  url: 'https://doc.kakarot.org/',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
