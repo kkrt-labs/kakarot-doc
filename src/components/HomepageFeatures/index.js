@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        More details on how to build the solution <a href="https://github.com/sayajin-labs/kakarot#build" target="_blank">here</a>.
+        More details on how to build the solution <a href="https://github.com/sayajin-labs/kakarot#build" target="_blank">here</a>
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-        More details on how to deploy Kakarot <a href="https://github.com/sayajin-labs/kakarot#deploy" target="_blank">here</a>.
+        More details on how to deploy Kakarot <a href="https://github.com/sayajin-labs/kakarot#deploy" target="_blank">here</a>
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/logo.svg').default,
     description: (
       <>
-      More details on how to contribute <a href="https://github.com/sayajin-labs/kakarot/blob/main/docs/CONTRIBUTING.md" target="_blank">here</a>.
+      More details on how to contribute <a href="https://github.com/sayajin-labs/kakarot/blob/main/docs/CONTRIBUTING.md" target="_blank">here</a>
       </>
     ),
   },
