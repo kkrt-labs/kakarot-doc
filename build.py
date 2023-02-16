@@ -130,7 +130,7 @@ class Document():
                 for arg in (function_comment.get(method) or [])
             }
 
-            markdown.new_line("```python")
+            markdown.new_line("```")
             for arg in args:
                 # arg.update(argcoms.get(arg.get('name'), {}))
                 argcom = argcoms.get(arg.get('name'), {})
